@@ -42,7 +42,7 @@ const DashboardPlugin = (DashboardPlugin =>
 // Webpack config -------------------------------------
 const config = {
   mode: devMode ? "development" : "production",
-  entry: "./src/index.js",
+  entry: ["@babel/polyfill", "./src/index.js"],
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, devMode ? ".test-dev" : "build")
@@ -97,15 +97,15 @@ const config = {
     open: true
   },
   plugins: [
-    CleanWebpackPlugin,
     CopyPlugin,
     HtmlWebpackPlugin,
     MiniCssExtractPlugin,
-
+    
     // Dev
     DashboardPlugin,
-
+    
     // Production
+    !devMode && CleanWebpackPlugin,
     !devMode && OptimizeCSSAssets
   ]
 };

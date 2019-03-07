@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "set NODE_ENV=development & webpack-dashboard -- webpack-dev-server -d --hot --config webpack.config.js --watch --mode development",
+    "start": "set NODE_ENV=development & webpack-dev-server -d --hot --config webpack.config.js --watch --mode development",
+    "start:dashboard": "set NODE_ENV=development & webpack-dashboard -- webpack-dev-server -d --hot --config webpack.config.js --watch --mode development",
     "build": "set NODE_ENV=production & webpack --optimize-minimize --mode production"
   },
   "author": "Maycon Santos",
@@ -12,6 +13,7 @@
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.3.4",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
@@ -34,6 +36,10 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "@webcomponents/webcomponentsjs": "^2.2.7",
+    "babel-plugin-loop-optimizer": "^1.4.1",
+    "fast-async": "^6.3.8",
     "webpack": "^4.29.6"
   }
 }

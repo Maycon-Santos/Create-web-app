@@ -1,3 +1,9 @@
-#example{
-  background: red;;
+// Guide: https://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/
+
+p{
+  display: block;
+  color: #05043a;
+  + p{
+    margin-top: 20px;
+  }
 }

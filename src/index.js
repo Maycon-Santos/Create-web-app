@@ -1,3 +1,8 @@
+import "./helpers/supportShadowDOM";
+import "@webcomponents/webcomponentsjs";
+import bodyStyle from "./assets/stylesheets/body.scss";
+import { loadStyle } from "./helpers/loaders";
+
 const loadComponents = () => {
   const req = require.context("./components", true, /^(.*\.(js$))[^.]*$/);
   req.keys().forEach(req);
@@ -13,6 +18,7 @@ const loadApp = () => {
   req.keys().forEach(req);
 }
 
-loadComponents();
-loadScreens();
-loadApp();
+loadStyle(document.head, bodyStyle)
+  .then(loadComponents)
+  .then(loadScreens)
+  .then(loadApp);
