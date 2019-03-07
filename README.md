@@ -2,11 +2,10 @@
 
 Inicie seus projetos sem configurar o ambiente.
 
-- [Iniciando o projeto](#iniciando-projeto)
-- [Compilando o projeto para produção](#compilando-projeto)
-- [Entendendo a estrutura de pastas](#entendendo-estrutura)
+- [Iniciando o projeto](#Iniciando-o-projeto)
+- [Compilando o projeto para produção](#Compilando-o-projeto-para-produção)
+- [Entendendo a estrutura de pastas](#Entendendo-a-estrutura-de-pastas)
 
-# iniciando-projeto
 ## Iniciando o projeto
 
 Faça um clone do repositório:
@@ -31,14 +30,12 @@ Rode o comando **`npm start:dashboard`** ou **`yarn start:dashboard`** e veja al
 <br /><br />
 ![Print do Dashboard](https://i.imgur.com/smj8htxl.png)
 
-# compilando-projeto
 ## Compilando o projeto para produção
 
 Vai chegar a hora que você vai precisar fazer o deploy da sua web app, e claro que você vai querer que o seu projeto seja otimizado pra isso.
 <br /> Basta rodar o comando **`npm run build`** ou **`yarn build`**.
 <br /> Na raiz do projeto será gerada uma pasta chamada build. É lá onde está todo o projeto otimizado para deploy.
 
-# entendendo-estrutura
 ## Entendendo a estrutura de pastas
 
 ```
