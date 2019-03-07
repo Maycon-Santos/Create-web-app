@@ -11,7 +11,7 @@ Inicie seus projetos sem configurar o ambiente.
 
 Faça um clone do repositório:
 ```sh
-git clone https://github.com/Maycon-Santos/web-project-template.git
+git clone https://github.com/Maycon-Santos/Create-web-app.git
 ```
 
 Instale as dependências:
